@@ -2,19 +2,12 @@ body {
     margin: 0;
     padding: 0;
     height: 100%;
-    width: 100%;
-
     font-family: Arial, sans-serif;
 }
 
-/*main, body > header {*/
-/*main {*/
-/*    border: 1px solid black;*/
-/*}*/
-
 body > header {
     font-weight: bold;
-    line-height: 20pt;
+    line-height: 24pt;
     color: #7C002F;
 
     padding: 0 10px;
@@ -32,8 +25,8 @@ main {
 
 .item_title {
     font-weight: bold;
-    text-align: center;
     height: 90px;
+    text-align: center;
     background-color: #7C7C7C;
     color: white;
 
@@ -44,19 +37,24 @@ main {
 
 .item {
     height: 500px;
-    margin: 10px;
+    margin: 0 10px;
     flex: 1 1 0;
 
     box-shadow: 0 0 10px #7C7C7C;
     position:relative;
 }
 
+.item:first-child {
+    margin-left: 0;
+}
+
+.item:last-child {
+    margin-right: 0;
+}
+
 .wrapper_items {
     display: flex;
-    margin: 10px 0;
-    /*flex-wrap: nowrap;*/
-    /*flex-wrap: wrap;*/
-    /*justify-content: center;*/
+    margin: 15px 0 0;
 }
 
 .item_photo {
@@ -80,18 +78,11 @@ main {
     transform: scale(1.03);
 }
 
-.item_title div:last-child {
-    display: none;
-}
-
-.item_photo img:last-child {
-    display: none;
-}
-
+.item_title div:last-child,
+.item_photo img:last-child,
 input[name="but"] {
     display: none;
 }
-
 
 label {
     position: absolute;
@@ -211,5 +202,26 @@ input[id="7"]:checked ~ .wrapper_items article:nth-child(7) .item_photo img:last
 input[id="7"]:checked ~ .wrapper_items article:nth-child(7) .item_description {
     transition: all 3s linear;
     display: block;
+}
 
+@media screen and (min-device-width: 425px) and (max-device-width: 768px){
+    .item {
+        flex: 0 0 30%;
+        margin: 10px 0;
+    }
+    .wrapper_items {
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+}
+
+@media screen and (max-device-width: 425px){
+    .item {
+        flex: 0 0 45%;
+        margin: 10px 0;
+    }
+    .wrapper_items {
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
 }
