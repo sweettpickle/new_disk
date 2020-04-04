@@ -1,0 +1,215 @@
+body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+
+    font-family: Arial, sans-serif;
+}
+
+/*main, body > header {*/
+/*main {*/
+/*    border: 1px solid black;*/
+/*}*/
+
+body > header {
+    font-weight: bold;
+    line-height: 20pt;
+    color: #7C002F;
+
+    padding: 0 10px;
+}
+
+main {
+    margin: 10px 20px;
+    line-height: 16pt;
+}
+
+.description > span {
+    /*color: #DFE4E7;*/
+    color: #7C7C7C;
+}
+
+.item_title {
+    font-weight: bold;
+    text-align: center;
+    height: 90px;
+    background-color: #7C7C7C;
+    color: white;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.item {
+    height: 500px;
+    margin: 10px;
+    flex: 1 1 0;
+
+    box-shadow: 0 0 10px #7C7C7C;
+    position:relative;
+}
+
+.wrapper_items {
+    display: flex;
+    margin: 10px 0;
+    /*flex-wrap: nowrap;*/
+    /*flex-wrap: wrap;*/
+    /*justify-content: center;*/
+}
+
+.item_photo {
+    padding: 10px 0 5px;
+    height: 150px;
+}
+
+.item_photo img {
+    object-fit: contain;
+    width: 100%;
+    height: 100%;
+}
+
+.item_description {
+    padding: 0 10px;
+    display: none;
+}
+
+.item:hover {
+    transition: all 0.3s linear;
+    transform: scale(1.03);
+}
+
+.item_title div:last-child {
+    display: none;
+}
+
+.item_photo img:last-child {
+    display: none;
+}
+
+input[name="but"] {
+    display: none;
+}
+
+
+label {
+    position: absolute;
+    left: 50%;
+    bottom: 15px;
+    transform: translateX(-50%);
+
+    padding: 15px 30px;
+    line-height: 2.0em;
+}
+
+label:before {
+    content: "";
+    position: absolute;
+    display: block;
+    left: 0;
+    top: 0;
+    width: 60px;
+    height: 30px;
+    border-radius: 20px;
+    border: 1px solid #7C002F;
+    transition: all 0.3s;
+}
+
+label:after {
+    content: "";
+    position: absolute;
+    display: block;
+    left: -3px;
+    top: -3px;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background: #F9FDC0;
+    border: 1px solid #7C002F;
+    transition: all 0.3s;
+}
+
+label:hover:after {
+    box-shadow: 0 0 5px #7C002F;
+}
+
+label:hover {
+    cursor: pointer;
+}
+
+input[id="1"]:checked ~ .wrapper_items label[for="1"]:after,
+input[id="2"]:checked ~ .wrapper_items label[for="2"]:after,
+input[id="3"]:checked ~ .wrapper_items label[for="3"]:after,
+input[id="4"]:checked ~ .wrapper_items label[for="4"]:after,
+input[id="5"]:checked ~ .wrapper_items label[for="5"]:after,
+input[id="6"]:checked ~ .wrapper_items label[for="6"]:after,
+input[id="7"]:checked ~ .wrapper_items label[for="7"]:after {
+    margin-left: 30px;
+}
+
+input[id="1"]:checked ~ .wrapper_items label[for="1"]:before,
+input[id="2"]:checked ~ .wrapper_items label[for="2"]:before,
+input[id="3"]:checked ~ .wrapper_items label[for="3"]:before,
+input[id="4"]:checked ~ .wrapper_items label[for="4"]:before,
+input[id="5"]:checked ~ .wrapper_items label[for="5"]:before,
+input[id="6"]:checked ~ .wrapper_items label[for="6"]:before,
+input[id="7"]:checked ~ .wrapper_items label[for="7"]:before {
+    background-color: #7C002F;
+}
+
+input[id="1"]:checked ~ .wrapper_items article:nth-child(1) .item_title,
+input[id="2"]:checked ~ .wrapper_items article:nth-child(2) .item_title,
+input[id="3"]:checked ~ .wrapper_items article:nth-child(3) .item_title,
+input[id="4"]:checked ~ .wrapper_items article:nth-child(4) .item_title,
+input[id="5"]:checked ~ .wrapper_items article:nth-child(5) .item_title,
+input[id="6"]:checked ~ .wrapper_items article:nth-child(6) .item_title,
+input[id="7"]:checked ~ .wrapper_items article:nth-child(7) .item_title
+{
+    transition: all 0.3s linear;
+    background-color: #7C002F;
+}
+
+input[id="1"]:checked ~ .wrapper_items article:nth-child(1) .item_title div:first-child,
+input[id="1"]:checked ~ .wrapper_items article:nth-child(1) .item_photo img:first-child,
+input[id="2"]:checked ~ .wrapper_items article:nth-child(2) .item_title div:first-child,
+input[id="2"]:checked ~ .wrapper_items article:nth-child(2) .item_photo img:first-child,
+input[id="3"]:checked ~ .wrapper_items article:nth-child(3) .item_title div:first-child,
+input[id="3"]:checked ~ .wrapper_items article:nth-child(3) .item_photo img:first-child,
+input[id="4"]:checked ~ .wrapper_items article:nth-child(4) .item_title div:first-child,
+input[id="4"]:checked ~ .wrapper_items article:nth-child(4) .item_photo img:first-child,
+input[id="5"]:checked ~ .wrapper_items article:nth-child(5) .item_title div:first-child,
+input[id="5"]:checked ~ .wrapper_items article:nth-child(5) .item_photo img:first-child,
+input[id="6"]:checked ~ .wrapper_items article:nth-child(6) .item_title div:first-child,
+input[id="6"]:checked ~ .wrapper_items article:nth-child(6) .item_photo img:first-child,
+input[id="7"]:checked ~ .wrapper_items article:nth-child(7) .item_title div:first-child,
+input[id="7"]:checked ~ .wrapper_items article:nth-child(7) .item_photo img:first-child  {
+    transition: all 3s linear;
+    display: none;
+}
+
+input[id="1"]:checked ~ .wrapper_items article:nth-child(1) .item_title div:last-child,
+input[id="1"]:checked ~ .wrapper_items article:nth-child(1) .item_photo img:last-child,
+input[id="1"]:checked ~ .wrapper_items article:nth-child(1) .item_description,
+input[id="2"]:checked ~ .wrapper_items article:nth-child(2) .item_title div:last-child,
+input[id="2"]:checked ~ .wrapper_items article:nth-child(2) .item_photo img:last-child,
+input[id="2"]:checked ~ .wrapper_items article:nth-child(2) .item_description,
+input[id="3"]:checked ~ .wrapper_items article:nth-child(3) .item_title div:last-child,
+input[id="3"]:checked ~ .wrapper_items article:nth-child(3) .item_photo img:last-child,
+input[id="3"]:checked ~ .wrapper_items article:nth-child(3) .item_description,
+input[id="4"]:checked ~ .wrapper_items article:nth-child(4) .item_title div:last-child,
+input[id="4"]:checked ~ .wrapper_items article:nth-child(4) .item_photo img:last-child,
+input[id="4"]:checked ~ .wrapper_items article:nth-child(4) .item_description,
+input[id="5"]:checked ~ .wrapper_items article:nth-child(5) .item_title div:last-child,
+input[id="5"]:checked ~ .wrapper_items article:nth-child(5) .item_photo img:last-child,
+input[id="5"]:checked ~ .wrapper_items article:nth-child(5) .item_description,
+input[id="6"]:checked ~ .wrapper_items article:nth-child(6) .item_title div:last-child,
+input[id="6"]:checked ~ .wrapper_items article:nth-child(6) .item_photo img:last-child,
+input[id="6"]:checked ~ .wrapper_items article:nth-child(6) .item_description,
+input[id="7"]:checked ~ .wrapper_items article:nth-child(7) .item_title div:last-child,
+input[id="7"]:checked ~ .wrapper_items article:nth-child(7) .item_photo img:last-child,
+input[id="7"]:checked ~ .wrapper_items article:nth-child(7) .item_description {
+    transition: all 3s linear;
+    display: block;
+
+}

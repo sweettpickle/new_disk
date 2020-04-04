@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Метеорологические явления</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+<header><h2>Критические значения параметров метеорологических явлений</h2></header>
+
+<main>
+    <div class="description">
+        Сами по себе атмосферные осадки и изменения температур не несут опасности, значение имеет то, насколько
+        они могут усилиться. Когда мелкий дождь становится затяжным или превращается в сильный дождь (ливень),
+        возникает опасность подтопления. Усиление, поначалу легкого ветерка до шквалистого ветра повышает вероятность
+        обрыва проводов. То же относится и к другим метеорологическим явлениям. С помощью переключателя «усильте» то или
+        иное явление природы и посмотрите, при каких критических параметрах оно становятся опасным.<br>
+        <span>*Сдвиньте переключатель под иконкой, чтобы увидеть критические параметры.</span>
+    </div>
+
+        <input id="1" type="checkbox" name="but">
+        <input id="2" type="checkbox" name="but">
+        <input id="3" type="checkbox" name="but">
+        <input id="4" type="checkbox" name="but">
+        <input id="5" type="checkbox" name="but">
+        <input id="6" type="checkbox" name="but">
+        <input id="7" type="checkbox" name="but">
+
+    <div class="wrapper_items">
+    <article class="item">
+            <header class="item_title">
+                <div>Ветер</div>
+                <div>Сильный ветер (шквалистый)</div>
+            </header>
+            <div class="item_photo">
+                <img src="src/1_off.png" alt="">
+                <img src="src/1_on.png" alt="">
+            </div>
+            <div class="item_description">
+                Скорость порывов от 25м/c и более.
+            </div>
+            <label for="1"></label>
+        </article>
+
+        <article class="item">
+            <header class="item_title">
+                <div>Дождь</div>
+                <div>Сильный дождь (Ливень)</div>
+            </header>
+            <div class="item_photo">
+                <img src="src/2_off.png" alt="">
+                <img src="src/2_on.png" alt="">
+            </div>
+            <div class="item_description">
+                Кол-во осадков 100 мм и более, в период менее чем за 12 часов.
+            </div>
+            <label for="2"></label>
+        </article>
+
+        <article class="item">
+            <header class="item_title">
+                <div>Снег</div>
+                <div>Сильный снег</div>
+            </header>
+            <div class="item_photo">
+                <img src="src/3_off.png" alt="">
+                <img src="src/3_on.png" alt="">
+            </div>
+            <div class="item_description">
+                Кол-во осадков 20 мм и более, в период менее чем за 12 часов.
+            </div>
+            <label for="3"></label>
+        </article>
+
+        <article class="item">
+            <header class="item_title">
+                <div>Метель</div>
+                <div>Сильная Метель</div>
+            </header>
+            <div class="item_photo">
+                <img src="src/4_off.png" alt="">
+                <img src="src/4_on.png" alt="">
+            </div>
+            <div class="item_description">
+                При ветре 20 м/c в течение суток с выпадением снега.
+            </div>
+            <label for="4"></label>
+        </article>
+
+        <article class="item">
+            <header class="item_title">
+                <div>Град</div>
+                <div>Крупный Град</div>
+            </header>
+            <div class="item_photo">
+                <img src="src/5_off.png" alt="">
+                <img src="src/5_on.png" alt="">
+            </div>
+            <div class="item_description">
+                Диаметр градин 20 мм и более.
+            </div>
+            <label for="5"></label>
+        </article>
+
+        <article class="item">
+            <header class="item_title">
+                <div>Гололед</div>
+                <div>Сильный Гололед</div>
+            </header>
+            <div class="item_photo">
+                <img src="src/6_off.png" alt="">
+                <img src="src/6_on.png" alt="">
+            </div>
+            <div class="item_description">
+                Диаметр отложений на проводах 20 мм и более.
+            </div>
+            <label for="6"></label>
+        </article>
+
+        <article class="item">
+            <header class="item_title">
+                <div>Мороз</div>
+                <div>Сильный Мороз</div>
+            </header>
+            <div class="item_photo">
+                <img src="src/7_off.png" alt="">
+                <img src="src/7_on.png" alt="">
+            </div>
+            <div class="item_description">
+                Температура воздуха у поверхности земли - 30°C и ниже для Европейской части РФ.
+            </div>
+            <label for="7"></label>
+        </article>
+
+    </div>
+</main>
+
+</body>
+</html>
